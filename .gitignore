@@ -1,0 +1,4 @@
+.xmake/
+build/
+nearemu
+nearemu.exe

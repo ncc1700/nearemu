@@ -1,0 +1,5 @@
+target("emu")  
+    set_kind("binary")
+    set_targetdir(".")
+    set_filename("nearemu")
+    add_files("emu/*.c", "emu/**/*.c")
