@@ -8,6 +8,9 @@
 
 #include <nearemu.h>
 
+#define MAX_REG_AMOUNT 63
+#define MAX_GENERAL_REG 30
+
 typedef enum _Op {
     OP_ADD,
     OP_SUB,
@@ -23,7 +26,6 @@ typedef enum _ArgType {
     ARG_THREE_REG
 } ArgType;
 
-#define MAX_REG_AMOUNT 63
 
 typedef struct _DecodedInstruction {
     uint8_t op:8;

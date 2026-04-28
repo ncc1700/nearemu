@@ -40,7 +40,7 @@ uint32_t CpuEncodeArgImmeTwo(DecodedArgImmeTwo* decoded){
 DecodedArgImmeTwo CpuDecodeArgImmeTwo(const uint32_t arg){
     DecodedArgImmeTwo decoded = {0};
     if(arg > ((1 << 24) - 1)){
-        // panic and die here, theres an error
+        // TODO (for me): panic and die here, theres an error
         DEBUG_FAIL("Argument is LARGER then the limit!\n");
         return decoded;
     }
@@ -98,7 +98,8 @@ DecodedArgRegThree CpuDecodeArgRegThree(const uint32_t arg){
 ArgType CpuGetArgTypeOfOp(const Op op){
     uint32_t size = (sizeof(opArgType)) / sizeof((opArgType[0]));
     if(op >= size){
-        return 0; // panic and die here
+        DEBUG_FAIL("Op is not defined\n");
+        return 0; // TODO (for me): panic and die here
     }
     return opArgType[op];
 }
