@@ -3,12 +3,12 @@
 
 
 static const ArgType opArgType[] = {
-    [OP_ADD] = ARG_THREE_REG, 
-    [OP_SUB] = ARG_THREE_REG, 
-    [OP_MUL] = ARG_THREE_REG, 
-    [OP_DIV] = ARG_THREE_REG, 
-    [OP_MOV] = ARG_TWO_REG, 
-    [OP_MOVI] = ARG_TWO_IMME
+    [OP_ADD] = ARG_REG_THREE, 
+    [OP_SUB] = ARG_REG_THREE, 
+    [OP_MUL] = ARG_REG_THREE, 
+    [OP_DIV] = ARG_REG_THREE, 
+    [OP_MOV] = ARG_REG_TWO, 
+    [OP_MOVI] = ARG_IMME_TWO
 };
 
 

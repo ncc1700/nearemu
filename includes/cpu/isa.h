@@ -21,9 +21,10 @@ typedef enum _Op {
 } Op;
 
 typedef enum _ArgType {
-    ARG_TWO_IMME,
-    ARG_TWO_REG, 
-    ARG_THREE_REG
+    ARG_IMME_TWO,
+    ARG_REG_TWO, 
+    ARG_REG_THREE,
+    ARG_NONE
 } ArgType;
 
 
