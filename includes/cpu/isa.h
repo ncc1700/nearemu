@@ -12,12 +12,18 @@
 #define MAX_GENERAL_REG 30
 
 typedef enum _Op {
+    OP_UNKNOWN = 0,
     OP_ADD,
     OP_SUB,
     OP_MUL, 
     OP_DIV, 
     OP_MOV,
-    OP_MOVI
+    OP_MOVI,
+    OP_STORE,
+    OP_LOAD,
+
+
+    OP_MAX
 } Op;
 
 typedef enum _ArgType {
@@ -27,6 +33,10 @@ typedef enum _ArgType {
     ARG_NONE
 } ArgType;
 
+typedef enum _SpecialRegisters {
+    SREG_PC = 31,
+    SREG_SP
+} SpecialRegisters;
 
 typedef struct _DecodedInstruction {
     uint8_t op:8;

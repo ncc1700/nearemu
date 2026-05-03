@@ -25,7 +25,6 @@ DecodedInstruction CpuDecodeInstruction(const uint32_t instruction){
 
     decoded.op = (instruction & ~(1 << 9));
     decoded.arg = (instruction >> 8);
-
     return decoded;
 }
 
@@ -61,7 +60,7 @@ uint32_t CpuEncodeArgRegTwo(DecodedArgRegTwo* decoded){
 DecodedArgRegTwo CpuDecodeArgRegTwo(const uint32_t arg){
     DecodedArgRegTwo decoded = {0};
     if(arg > ((1 << 24) - 1)){
-        // panic and die here, theres an error
+        // TODO (for me): panic and die here, theres an error
         DEBUG_FAIL("Argument is LARGER then the limit!\n");
         return decoded;
     }
@@ -83,7 +82,7 @@ uint32_t CpuEncodeArgRegThree(DecodedArgRegThree* decoded){
 DecodedArgRegThree CpuDecodeArgRegThree(const uint32_t arg){
     DecodedArgRegThree decoded = {0};
     if(arg > ((1 << 24) - 1)){
-        // panic and die here, theres an error
+        // TODO (for me): panic and die here, theres an error
         DEBUG_FAIL("Argument is LARGER then the limit!\n");
         return decoded;
     }
